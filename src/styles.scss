@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap.scss';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i');
+@import '~sass/variables';
+
+
+body {
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+
+    * {
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+b, strong {
+    font-weight: $font-weight-bold;
+}
+
+a {
+    color: $primary-color;
+}
+
+.header-navbar {
+    padding: 0;
+    border-bottom: 1px solid $base-border-color;
+    height: $navbar-height;
+
+    .navbar-brand {
+        height: $navbar-height;    
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        img {
+            @extend .float-left;
+        }
+
+        span {
+            font-size: 11px;
+            line-height: 1;
+            font-weight: 500;
+            vertical-align: bottom;
+            display: inline-block;
+            margin-bottom: 4px;
+            margin-left: -1px;
+        }
+    }
+
+    .navbar-nav {
+        > li {
+            >  a {
+                @extend .small;
+                @extend .text-muted;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
